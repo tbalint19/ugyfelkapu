@@ -1,5 +1,7 @@
 @import "./navbar/style.css";
 @import "./login/style.css";
+@import "./mainController/style.css";
+@import "./users/style.css";
 @import "./footer/style.css";
 
 body {
@@ -12,6 +14,6 @@ body {
   background-color: white;
   width: 880px;
   margin: 0 auto;
-  min-height: 1500px;
-  padding-top: 120px;
+  padding-top: 60px;
+  padding-bottom: 70px;
 }

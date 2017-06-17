@@ -4,6 +4,8 @@ import ViewDependencies from 'viewDependencies'
 
 import NavBar from './navbar/component'
 import Login from './login/component'
+import MainController from './mainController/component'
+import Users from './users/component'
 import Footer from './footer/component'
 
 class View extends React.Component{
@@ -17,7 +19,11 @@ class View extends React.Component{
 
         <NavBar data={data} state={state} controller={controller}/>
 
-        <Login data={data} state={state} controller={controller}/>
+        {/* <Login data={data} state={state} controller={controller}/> */}
+
+        {/* <MainController data={data} state={state} controller={controller}/> */}
+
+        <Users data={data} state={state} controller={controller}/>
 
         <Footer data={data} state={state} controller={controller}/>
 

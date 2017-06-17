@@ -28,7 +28,7 @@ export default Login
 
 const LoginLogo = (props) => (
   <div className={"login-logo"}>
-    <h2>(Maxoft Logo)</h2>
+    <h2>(MaXoft Logo)</h2>
   </div>
 )
 

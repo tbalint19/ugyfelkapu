@@ -8,7 +8,7 @@ class Footer extends Container {
         <div className={"footer-placeholder"}></div>
         <div className={"footer-controller"}>
           <div>
-            Maxoft Kft - Ügyfélkapu
+            MaXoft Kft - Ügyfélkapu
           </div>
           <div>
             Támogatás: +36 (1) 218 7091, maxoft@maxoft.hu
