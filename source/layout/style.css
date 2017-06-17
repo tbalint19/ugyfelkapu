@@ -1,7 +1,17 @@
-h1 {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  text-align: center;
+@import "./navbar/style.css";
+@import "./login/style.css";
+@import "./footer/style.css";
+
+body {
+  background-color: beige;
+  padding: 0;
   font-family: 'Montserrat', cursive;
+}
+
+.app {
+  background-color: white;
+  width: 880px;
+  margin: 0 auto;
+  min-height: 1500px;
+  padding-top: 120px;
 }

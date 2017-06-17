@@ -2,8 +2,9 @@ import React from 'react'
 
 import ViewDependencies from 'viewDependencies'
 
-// import Background from './background/component'
-// import NavBar from './navbar/component'
+import NavBar from './navbar/component'
+import Login from './login/component'
+import Footer from './footer/component'
 
 class View extends React.Component{
   render(){
@@ -14,10 +15,11 @@ class View extends React.Component{
       <div className="app">
         <ViewDependencies/>
 
-        {/* <Background/>
-        <NavBar/> */}
+        <NavBar data={data} state={state} controller={controller}/>
 
-        <h1>Hello world!</h1>
+        <Login data={data} state={state} controller={controller}/>
+
+        <Footer data={data} state={state} controller={controller}/>
 
         {/* App */}
         {/* {state.app == "login" && <Login data={data} state={state} controller={controller}/>} */}

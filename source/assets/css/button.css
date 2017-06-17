@@ -1,19 +1,19 @@
-.sherwood-button {
-  background: green;
-  color: gold;
+.maxoft-button {
+  background: white;
+  color: blue;
   padding: 10px;
-  font-family: 'Bangers', cursive;
-  background-color: #5cb85c;
+  font-family: 'Montserrat', cursive;
   box-shadow: 0px 0px 10px #999;
-  border: 2px solid green;
+  border: 2px solid #5bc0de;
   border-radius: 3px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.sherwood-button:focus {
+.maxoft-button:focus {
   outline:0;
 }
 
-.sherwood-button:active {
-  box-shadow: 0px 0px 50px gold;
+.maxoft-button:active {
+  box-shadow: 0px 0px 20px #5bc0de;
 }

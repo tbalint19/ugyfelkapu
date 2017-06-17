@@ -1,3 +1,9 @@
 .material-icons.md-12 {
   font-size: 14px;
 }
+
+.icon-align {
+  vertical-align: text-bottom;
+  margin-left: 0;
+  margin-right: 5px;
+}
