@@ -1,7 +1,8 @@
 .sherwood-modal {
-  background-color: beige;
+  background-color: white;
   z-index: 21;
   border-radius: 3px;
+  border: 1px solid #5bc0de;
   position: absolute;
   animation: sherwoodModalAppear 0.4s forwards;
 }
@@ -12,8 +13,8 @@
   height: 100vh;
   left: 0;
   width: 100%;
-  background-color: green;
-  opacity: 0.3;
+  background-color: beige;
+  opacity: 0.7;
   z-index: 20;
   animation: sherwoodModalBackgroundAppear 0.4s forwards;
 }
@@ -35,7 +36,7 @@
 
 @keyframes sherwoodModalBackgroundAppear {
   0% {opacity: 0;}
-  100% {opacity: 0.3;}
+  100% {opacity: 0.8;}
 }
 
 .sherwood-modal-leave {

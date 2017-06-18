@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from 'maxoft_modal'
+import Modal from 'maxoftModal'
 
 class EditUser extends Modal {
 

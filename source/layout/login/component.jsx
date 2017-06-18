@@ -2,7 +2,9 @@ import React from 'react'
 import Container from 'container'
 
 class Login extends Container {
-
+  requestForgotten(){
+    this.dispatch({type: "MODAL_OPENED", modal: "forgottenModal"})
+  }
   render(){
     let language = this.props.state.language
     let forgotten = {eng: "Forgotten password?", hun: "Elfelejtett jelszó?"}
@@ -15,7 +17,7 @@ class Login extends Container {
         <LoginInput placeholder={username[language]}/>
         <LoginInput placeholder={password[language]}/>
         <div className={"forgotten"}>
-          <button className={"link-button"}>{forgotten[language]}</button>
+          <button className={"link-button"} onClick={()=>this.requestForgotten()}>{forgotten[language]}</button>
         </div>
         <div className={"login-button"}>
           <button className={"maxoft-button"}>

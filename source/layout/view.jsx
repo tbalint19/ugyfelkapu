@@ -10,6 +10,7 @@ import MainController from './mainController/component'
 import Users from './users/component'
 
 import EditUser from './editUser/component'
+import ForgottenModal from './forgotten/component'
 
 class View extends React.Component{
   render(){
@@ -26,14 +27,13 @@ class View extends React.Component{
 
         {/* Apps */}
         {state.app == "login" && <Login data={data} state={state} controller={controller}/>}
-
         {state.app == "mainController" && <MainController data={data} state={state} controller={controller}/>}
-
         {state.app == "users" && <Users data={data} state={state} controller={controller}/>}
 
 
         {/* Modal */}
         {state.modal == "editUser" && <EditUser data={data} state={state} controller={controller}/>}
+        {state.modal == "forgottenModal" && <ForgottenModal data={data} state={state} controller={controller}/>}
 
       </div>
     )
