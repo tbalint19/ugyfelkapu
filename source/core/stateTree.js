@@ -1,15 +1,24 @@
 const stateTree = {
 
   state: {
-    app: 'wall',
+    language: "hun",
+    app: 'login',
     modal: null,
     inTransition: false,
+    login: {
+      username: "",
+      password: "",
+      error: false
+    }
   },
 
   data: {
     user: {
-      username: ""
-    }
+      id: null,
+      username: "",
+      email: ""
+    },
+    users: []
   }
 
 }

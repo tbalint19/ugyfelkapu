@@ -3,9 +3,8 @@ import createApiController from 'datamanager'
 import stateTree from './stateTree'
 
 import {
-  firstReducer,
-  secondReducer
-} from './reducers/firstReducers'
+  languageReducer
+} from './reducers/stateReducers'
 
 const core = (() => {
 
@@ -13,10 +12,8 @@ const core = (() => {
 
   const reducer = (current = initialState, action) => {
     switch (action.type) {
-      case "SOMETHING_HAPPENED":
-        return firstReducer(current, action)
-      case "SOMETHING_ELSE_HAPPENED":
-        return secondReducer(current, action)
+      case "LANGUAGE_CHANGED":
+        return languageReducer(current, action)
       default:
         return Object.assign({}, current)
     }

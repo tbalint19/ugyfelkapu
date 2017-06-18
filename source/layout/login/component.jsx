@@ -4,18 +4,23 @@ import Container from 'container'
 class Login extends Container {
 
   render(){
+    let language = this.props.state.language
+    let forgotten = {eng: "Forgotten password?", hun: "Elfelejtett jelszó?"}
+    let login = {eng: "Login", hun: "Bejelentkezés"}
+    let username = {eng: "Username", hun: "Felhasználónév"}
+    let password = {eng: "Password", hun: "Jelszó"}
     return (
       <div className={"login"}>
         <LoginLogo/>
-        <LoginInput placeholder={"username"}/>
-        <LoginInput placeholder={"password"}/>
+        <LoginInput placeholder={username[language]}/>
+        <LoginInput placeholder={password[language]}/>
         <div className={"forgotten"}>
-          <button className={"link-button"}>Forgotten password?</button>
+          <button className={"link-button"}>{forgotten[language]}</button>
         </div>
         <div className={"login-button"}>
           <button className={"maxoft-button"}>
             <i className="material-icons md-12 icon-align">vpn_key</i>
-            Login
+            {login[language]}
           </button>
         </div>
       </div>
