@@ -1,8 +1,12 @@
-@import "./navbar/style.css";
-@import "./login/style.css";
-@import "./mainController/style.css";
-@import "./users/style.css";
-@import "./footer/style.css";
+@import "./const/navbar/style.css";
+@import "./const/footer/style.css";
+@import "./apps/login/style.css";
+@import "./apps/mainController/style.css";
+@import "./apps/users/style.css";
+@import "./modals/editRole/style.css";
+@import "./modals/filterRole/style.css";
+@import "./modals/editUser/style.css";
+@import "./modals/forgotten/style.css";
 
 body {
   background-color: beige;

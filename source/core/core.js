@@ -11,6 +11,15 @@ import {
   modalClosedReducer
 } from './reducers/viewReducers'
 
+import {
+  inputReducer
+} from './reducers/actionReducers'
+
+import {
+  requestedLoginReducer,
+  loginResponseReducer
+} from './reducers/responseReducers'
+
 const core = (() => {
 
   const initialState = Object.assign({}, stateTree)
@@ -26,6 +35,12 @@ const core = (() => {
         return modalOpenReducer(current, action)
       case "MODAL_CLOSED":
         return modalClosedReducer(current, action)
+      case "INPUT_FIELD_CHANGED":
+        return inputReducer(current, action)
+      case "LOGIN_REQUESTED":
+        return requestedLoginReducer(current, action)
+      case "LOGIN_RESPONSE_ARRIVED":
+        return loginResponseReducer(current, action)
       default:
         return Object.assign({}, current)
     }

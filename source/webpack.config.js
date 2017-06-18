@@ -8,7 +8,7 @@ module.exports = {
   },
 
   output: {
-      path: '../target',
+      path: '../target/static',
       filename: "[name].js",
   },
 

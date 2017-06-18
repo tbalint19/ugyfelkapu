@@ -2,15 +2,17 @@ import React from 'react'
 
 import ViewDependencies from 'viewDependencies'
 
-import NavBar from './navbar/component'
-import Footer from './footer/component'
+import NavBar from './const/navbar/component'
+import Footer from './const/footer/component'
 
-import Login from './login/component'
-import MainController from './mainController/component'
-import Users from './users/component'
+import Login from './apps/login/component'
+import MainController from './apps/mainController/component'
+import Users from './apps/users/component'
 
-import EditUser from './editUser/component'
-import ForgottenModal from './forgotten/component'
+import EditUser from './modals/editUser/component'
+import EditRole from './modals/editRole/component'
+import FilterRole from './modals/filterRole/component'
+import ForgottenModal from './modals/forgotten/component'
 
 class View extends React.Component{
   render(){
@@ -33,6 +35,8 @@ class View extends React.Component{
 
         {/* Modal */}
         {state.modal == "editUser" && <EditUser data={data} state={state} controller={controller}/>}
+        {state.modal == "editRole" && <EditRole data={data} state={state} controller={controller}/>}
+        {state.modal == "filterRole" && <FilterRole data={data} state={state} controller={controller}/>}
         {state.modal == "forgottenModal" && <ForgottenModal data={data} state={state} controller={controller}/>}
 
       </div>

@@ -5,6 +5,8 @@ const stateTree = {
     app: 'login',
     modal: null,
     inTransition: false,
+    pendingResponses: [],
+    selectedRoles: [],
     login: {
       username: "",
       password: "",
@@ -17,6 +19,10 @@ const stateTree = {
       id: null,
       username: "",
       email: ""
+    },
+    firm: {
+      id: null,
+      name: ""
     },
     users: []
   }
