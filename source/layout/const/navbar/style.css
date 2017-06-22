@@ -19,6 +19,12 @@
   color: blue;
 }
 
+.navbar-welcome {
+  padding: 7px;
+  color: black;
+  font-size: 0.8em;
+}
+
 .navbar-buttons {
 
 }

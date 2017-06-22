@@ -13,24 +13,29 @@ class Login extends Container {
     let action = {type: "LOGIN_RESPONSE_ARRIVED"}
     let request = {method: "POST", destination: 'login', data: data, action: action}
     this.JSONtransfer(request)
-    this.dispatch({type: "LOGIN_REQUESTED"})
+    this.dispatch({type: "REQUEST_MADE", request: "login"})
   }
   render(){
     let language = this.props.state.language
     let usernameValue = this.props.state.login.username
     let passwordValue = this.props.state.login.password
+    let status = this.props.state.login.status
     let forgotten = {eng: "Forgotten password?", hun: "Elfelejtett jelszó?"}
     let login = {eng: "Login", hun: "Bejelentkezés"}
     let username = {eng: "Username", hun: "Felhasználónév"}
     let password = {eng: "Password", hun: "Jelszó"}
+    let error = {eng: "Invalid credentials", hun: "Hibás adatok"}
     return (
       <div className={"login"}>
         <LoginLogo/>
+        <ErrorPlaceholder status={status} text={error[language]}/>
         <LoginInput
+          type={"text"}
           value={usernameValue}
           placeholder={username[language]}
           action={(event)=>this.reportChange(event, "loginUsername")}/>
         <LoginInput
+          type={"password"}
           value={passwordValue}
           placeholder={password[language]}
           action={(event)=>this.reportChange(event, "loginPassword")}/>
@@ -59,6 +64,12 @@ const LoginLogo = (props) => (
 
 const LoginInput = (props) => (
   <div className={"login-input"}>
-    <input placeholder={props.placeholder} onChange={props.action} value={props.value}/>
+    <input placeholder={props.placeholder} onChange={props.action} value={props.value} type={props.type}/>
+  </div>
+)
+
+const ErrorPlaceholder = (props) => (
+  <div className={"login-error"}>
+    {props.status == "error" ? <p>{props.text}</p> : null}
   </div>
 )

@@ -23,14 +23,13 @@ class View extends React.Component{
       <div className="app">
         <ViewDependencies/>
 
+
         <NavBar data={data} state={state} controller={controller}/>
-
-        <Footer data={data} state={state} controller={controller}/>
-
         {/* Apps */}
         {state.app == "login" && <Login data={data} state={state} controller={controller}/>}
         {state.app == "mainController" && <MainController data={data} state={state} controller={controller}/>}
         {state.app == "users" && <Users data={data} state={state} controller={controller}/>}
+        <Footer data={data} state={state} controller={controller}/>
 
 
         {/* Modal */}
@@ -38,6 +37,7 @@ class View extends React.Component{
         {state.modal == "editRole" && <EditRole data={data} state={state} controller={controller}/>}
         {state.modal == "filterRole" && <FilterRole data={data} state={state} controller={controller}/>}
         {state.modal == "forgottenModal" && <ForgottenModal data={data} state={state} controller={controller}/>}
+
 
       </div>
     )

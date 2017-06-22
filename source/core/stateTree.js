@@ -7,10 +7,22 @@ const stateTree = {
     inTransition: false,
     pendingResponses: [],
     selectedRoles: [],
+    selectedUser: null,
     login: {
       username: "",
       password: "",
-      error: false
+      status: "start"
+    },
+    reset: {
+      username: "",
+      status: "start"
+    },
+    searchParams: {
+      username: "",
+      ID: "",
+      firmID: "",
+      name: "",
+      birthDate: ""
     }
   },
 

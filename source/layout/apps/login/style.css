@@ -23,3 +23,9 @@
   margin-top: 30px;
   margin-right: 70px;
 }
+
+.login-error {
+  color: red;
+  height: 25px;
+  text-align: center;
+}
